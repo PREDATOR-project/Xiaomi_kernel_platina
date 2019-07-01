@@ -143,6 +143,10 @@ config IOSCHED_ANXIETY
 
 >>>>>>> 1a95e98da564... block: Introduce Anxiety I/O Scheduler
 
+config IOSCHED_DEPRESSION
+	tristate "DEPRESSION I/O scheduler"
+	default y
+
 choice
 	prompt "Default I/O scheduler"
 	default DEFAULT_CFQ
@@ -195,11 +199,15 @@ choice
 	config DEFAULT_ZEN
 		bool "ZEN" if IOSCHED_ZEN=y
 
+
+	config DEFAULT_DEPRESSION
+		bool "Depression" if IOSCHED_DEPRESSION=y
 endchoice
 
 config DEFAULT_IOSCHED
 	string
 	default "deadline" if DEFAULT_DEADLINE
+	default "depression" if DEFAULT_DEPRESSION
 	default "cfq" if DEFAULT_CFQ
 <<<<<<< HEAD
 	default "bfq" if DEFAULT_BFQ
