@@ -1671,11 +1671,11 @@ static void hdd_print_bss_info(struct hdd_station_ctx *hdd_sta_ctx)
 	hdd_debug("datarate mcs: %d",
 		 hdd_sta_ctx->conn_info.txrate.mcs);
 	if (hdd_sta_ctx->conn_info.conn_flag.ht_present) {
-		cap_info = (uint32_t *)
+		cap_info = uint32_t *)
 		hdd_debug("ht caps: %x", *cap_info);
 	}
 	if (hdd_sta_ctx->conn_info.conn_flag.vht_present) {
-		cap_info = (uint32_t *)
+		cap_info = uint32_t *)
 		hdd_debug("vht caps: %x", *cap_info);
 	}
 	if (hdd_sta_ctx->conn_info.conn_flag.hs20_present)
