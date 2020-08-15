@@ -2178,7 +2178,7 @@ static int mdss_mdp_cmd_wait4pingpong(struct mdss_mdp_ctl *ctl, void *arg)
 		}
 
 		/* disable te irq */
-		panel_update_te_irq(pdata, false);
+		(pdata, false);
 
 		ctx->pp_timeout_report_cnt++;
 		rc = -EPERM;
