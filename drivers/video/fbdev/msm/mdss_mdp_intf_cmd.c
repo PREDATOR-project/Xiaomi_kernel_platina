@@ -2155,7 +2155,7 @@ static int mdss_mdp_cmd_wait4pingpong(struct mdss_mdp_ctl *ctl, void *arg)
 				atomic_read(&ctx->koff_cnt));
 
 		/* enable TE irq to check if it is coming from the panel */
-		panel_update_te_irq(pdata, true);
+		(panel_update_te_irq(pdata, true));
 
 		/* wait for 20ms to ensure we are getting the next TE */
 		usleep_range(20000, 20010);
