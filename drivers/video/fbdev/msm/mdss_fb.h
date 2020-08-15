@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 /* Copyright (c) 2008-2017, The Linux Foundation. All rights reserved.
  * Copyright (C) 2020 XiaoMi, Inc.
+=======
+/* Copyright (c) 2008-2020, The Linux Foundation. All rights reserved.
+>>>>>>> als/kernel.lnx.4.4.r38-rel
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 and
@@ -293,6 +297,7 @@ struct msm_fb_data_type {
 	int op_enable;
 	u32 fb_imgType;
 	int panel_reconfig;
+	int force_null_commit;
 	u32 panel_orientation;
 
 	u32 dst_format;
