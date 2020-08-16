@@ -11,9 +11,9 @@ jobs:
            git clone https://github.com/PREDATOR-project/Xiaomi_kernel_platina.git -b mi8 kernel
            cd kernel
            git clone https://github.com/PREDATOR-project/myscripts.git -b master
-           chmod +x myscripts/envsetup.sh
+           chmod +x myscripts/setup-test.sh
            chmod +x myscripts/platina.sh
-           source ./myscripts/envsetup.sh
+           source ./myscripts/setup-test.sh
            ./myscripts/platina.sh
 workflows:
   version: 2.1
